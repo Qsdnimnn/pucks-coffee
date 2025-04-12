@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gallery - Pucks Coffee</title>
+        <link rel="stylesheet" href="gallery.css">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <img src="assets/pucks-logo.png" alt="Pucks Logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html"  class="active">Gallery</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <header class="gallery-header">
+                <h1>Gallery</h1>
+            </header>
+    
+            <section class="gallery-container">
+                <div class="gallery">
+                    <img src="assets/gallery/gallery1.jpeg" alt="Coffee Art">
+                    <img src="assets/gallery/gallery2.jpeg" alt="Cozy Cafe">
+                    <img src="assets/gallery/gallery3.jpeg" alt="Barista at Work">
+                    <img src="assets/gallery/gallery4.jpeg" alt="Freshly Brewed Coffee">
+                    <img src="assets/gallery/gallery5.jpeg" alt="Cafe Interior">
+                    <img src="assets/gallery/gallery6.jpeg" alt="Pastry and Coffee">
+                    <img src="assets/gallery/gallery7.jpeg" alt="Latte Art">
+                    <img src="assets/gallery/gallery8.jpeg" alt="Customer Enjoying Coffee">
+                </div>
+            </section>
+    
+            <!-- YouTube Video Section -->
+            <section class="video-section">
+                <div class="video-content">
+                    <h2>Experience the Art of Coffee</h2>
+                    <p>Watch how we craft the perfect cup of coffee with passion and precision.</p>
+                    <div class="video-box">
+                        <iframe src="https://www.youtube.com/embed/TLmcJ7LgxqM?si=XRbtUecwO_8qnBoZ" 
+                            title="Pucks Coffee Experience" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Background Music -->
+            <audio id="background-music" loop>
+                <source src="assets/soundtrack.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+    
+            <!-- Sound Control Button -->
+            <button id="sound-toggle">🔇 Sound Off</button>
+        </div>
+
+        <script>
+            const audio = document.getElementById("background-music");
+            const soundButton = document.getElementById("sound-toggle");
+
+            let isPlaying = false;
+
+            soundButton.addEventListener("click", function () {
+                if (isPlaying) {
+                    audio.pause();
+                    soundButton.innerHTML = "🔇 Sound Off";
+                } else {
+                    audio.play();
+                    soundButton.innerHTML = "🔊 Sound On";
+                }
+                isPlaying = !isPlaying;
+            });
+        </script>
+    </body>
+</html>

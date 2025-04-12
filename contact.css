@@ -1,0 +1,213 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f3e5d8; /* Light Beige */
+}
+
+.main-content {
+    padding-top: 130px;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:rgb(63, 44, 35);
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo img {
+    width: 150px;
+}
+
+/* Menu Items */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 30px;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff7e6;
+    font-size: 1.2rem;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    background: #a67b5b;
+    border-radius: 5px;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    /* Navigation */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav .logo img {
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply Animation to Page Elements */
+.contact-header, 
+.contact-info, 
+.contact-container, 
+.info, 
+.map {
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Contact Page Styling */
+.contact-header {
+    text-align: center;
+    padding: 100px 0 20px;
+    background: #5c4033; /* Coffee Brown */
+    color: white;
+}
+
+/* Contact Info */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+}
+
+/* Contact Details */
+.info {
+    width: 45%;
+}
+
+.info h2 {
+    color: #5c4033;
+}
+
+.info p {
+    color: #333;
+}
+
+.call-button {
+    display: inline-block;
+    background: #a67b5b;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.call-button:hover {
+    background: #8b5e3c;
+}
+
+/* Map Section */
+.map {
+    width: 45%;
+}
+
+.map iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+/* Social Media Icons */
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.social-media img {
+    width: 40px; /* Adjust icon size */
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info, .map {
+        width: 100%;
+    }
+
+    .social-media {
+        margin-top: 10px;
+    }
+
+    .social-media a {
+        margin: 0 10px;
+    }
+}

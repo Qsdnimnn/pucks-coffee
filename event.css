@@ -1,0 +1,271 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f3e5d8; /* Light Beige */
+}
+
+.main-content {
+    padding-top: 80px;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(63, 44, 35);
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo img {
+    width: 150px;
+}
+
+/* Menu Items */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 30px;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff7e6;
+    font-size: 1.2rem;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    background: #a67b5b;
+    border-radius: 5px;
+}
+
+/* Event Header */
+.event-header {
+    background: url('assets/banner1.jpeg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding-top: 70px;
+}
+
+.event-header h1 {
+    font-size: 3rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Events Section */
+.events {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.event-info {
+    max-width: 600px;
+}
+
+.event-info h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #5c4033;
+}
+
+.event-info p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply Animation to Page Elements */
+.event-header, 
+.events, 
+.event {
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Staggered Animation Delay */
+.event-header {
+    animation-delay: 0.2s;
+}
+
+.events {
+    animation-delay: 0.4s;
+}
+
+/* Fade-in effect for each event card */
+.event:nth-child(1) { animation-delay: 0.6s; }
+.event:nth-child(2) { animation-delay: 0.8s; }
+.event:nth-child(3) { animation-delay: 1s; }
+.event:nth-child(4) { animation-delay: 1.2s; }
+.event:nth-child(5) { animation-delay: 1.4s; }
+
+/* Event Styling */
+.events {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.event {
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+    transition: transform 0.3s;
+}
+
+.event:hover {
+    transform: scale(1.02);
+}
+
+.event img {
+    width: 40%;
+    object-fit: cover;
+}
+
+.event-info {
+    padding: 20px;
+}
+
+.event-info h2 {
+    margin: 0;
+    color: #5c4033;
+}
+
+.event-info p {
+    color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-content {
+        padding-top: 130px;
+    }
+    
+    /* Navigation */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav .logo img {
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    /* Adjust Event Header */
+    .event-header {
+        height: 30vh;
+        padding-top: 60px;
+    }
+
+    .event-header h1 {
+        font-size: 2rem;
+        padding: 15px;
+    }
+
+    /* Adjust Event Section */
+    .events {
+        width: 90%;
+        margin: 30px auto;
+        padding: 10px;
+    }
+
+    .event {
+        flex-direction: column; /* Stack elements */
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .event img {
+        width: 100%; /* Full width */
+        height: auto;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .event-info {
+        padding: 15px;
+    }
+
+    .event-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .event-info p {
+        font-size: 1rem;
+    }
+}

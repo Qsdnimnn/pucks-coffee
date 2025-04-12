@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Pucks Coffee</title>
+    <link rel="stylesheet" href="about.css">
+    <script defer src="menu.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="assets/pucks-logo.png" alt="Pucks Logo">
+        </div>
+
+        <!-- Hamburger Icon -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <ul id="menu">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="event.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <header class="about-header">
+            <h1>About Us</h1>
+        </header>
+    
+        <section class="about-content">
+            <div class="about-text">
+                <h2>Our Vision</h2>
+                <p>“To be the heart of the community, where every sip tells a story and every visit feels like home.”</p>
+    
+                <h2>Our Mission</h2>
+                <p>“To craft high-quality coffee in a cozy, welcoming space where every cup brings people together.” ☕</p>
+            </div>
+    
+            <div class="about-story">
+                <h2>Our Story</h2>
+                <p>
+                    Pucks Coffee started with a simple idea – to create a space where people can unwind, connect, and enjoy high-quality coffee. 
+                    Founded in 2018, our cafe has grown from a small neighborhood shop to a beloved community hub. 
+                    Every bean we brew is ethically sourced, carefully roasted, and crafted with passion. 
+                </p>
+            </div>
+    
+            <div class="why-choose-us">
+                <h2>Why Choose Us?</h2>
+                <ul>
+                    <li>☕ <strong>Premium Coffee Beans</strong> – Sourced from the finest farms worldwide.</li>
+                    <li>🏡 <strong>Cozy & Welcoming Atmosphere</strong> – A perfect blend of comfort and elegance.</li>
+                    <li>🌿 <strong>Sustainability</strong> – We care about the planet and use eco-friendly packaging.</li>
+                    <li>👨‍🍳 <strong>Expert Baristas</strong> – Every cup is brewed with love and expertise.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
